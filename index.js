@@ -1,9 +1,11 @@
 var express = require('express');
+var os = require('os');
 
 var app = express();
-
+app.set('counter',0);
 app.get('/', function(req, res){
-    res.send('Hello from inside a github based container!');
+    app.set('counter',app.get('counter')+1);
+    res.send('{ "requestCounter":' + app.get('counter') + ', "hostname":' + os.hostname() + ' ,"mesos-port":' + process.env["PORT0"] + '}');
 });
 
-app.listen(8080);
+app.listen(8089);

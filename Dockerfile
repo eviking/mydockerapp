@@ -1,6 +1,7 @@
 DOCKER-VERSION 0.10.0
 
-FROM ubuntu:13.10
+FROM ubuntu
+EXPOSE 8089
 
 # make sure apt is up to date
 RUN apt-get update
