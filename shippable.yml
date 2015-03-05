@@ -4,6 +4,7 @@ node_js:
   - 0.10.25
 before_install:
  - npm install
+commit_container: eviking/mda
 notifications:
     email:
         - jens@joyent.com
