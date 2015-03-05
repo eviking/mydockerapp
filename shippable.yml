@@ -1,4 +1,4 @@
-build_image: eviking/mydockerapp
+#build_image: eviking/mydockerapp
 language: node_js
 node_js:
   - 0.10.25
